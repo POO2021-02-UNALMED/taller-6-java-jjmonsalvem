@@ -27,6 +27,11 @@ public class Vehiculo {
 				
 	}
 
+    public static String veiculosPorTipo() {
+		
+		return "Automoviles: "+ Automovil.getCantidadAutomoviles()+"\nCamionetas: "+Camioneta.getCantidadCamionetas()+"\nCamion: "+Camion.getCantidadCamiones(); 
+	}
+
 	public String getPlaca() {
 		return placa;
 	}
@@ -100,10 +105,7 @@ public class Vehiculo {
 		Vehiculo.cantidadVehiculos = cantidadVehiculos;
 	}
 	
-	public static String veiculosPorTipo() {
-		
-		return "Automoviles: "+ Automovil.getCantidadAutomoviles()+"\nCamionetas: "+Camioneta.getCantidadCamionetas()+"\nCamion: "+Camion.getCantidadCamiones(); 
-	}
+	
 	
 	public static ArrayList<Vehiculo> getListaVehiculos(){
 		return Vehiculo.listaVehiculos;

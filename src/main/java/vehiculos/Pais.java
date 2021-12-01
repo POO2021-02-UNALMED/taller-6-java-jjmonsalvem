@@ -11,19 +11,7 @@ public class Pais {
 		Pais.listaPaises.add(this);
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
-	public static ArrayList<Pais> getListaPaises(){
-		return Pais.listaPaises;
-	}
-	
-	public static Pais paisMasVendedor() {
+    public static Pais paisMasVendedor() {
 		
 		int valorMax =0;
 		Pais salida=null;
@@ -41,4 +29,18 @@ public class Pais {
 		}
 		return salida;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public static ArrayList<Pais> getListaPaises(){
+		return Pais.listaPaises;
+	}
+	
+	
 }

@@ -12,6 +12,24 @@ public class Fabricante {
 		this.pais = pais;
 		Fabricante.listaFabricantes.add(this);
 	}
+
+    public static Fabricante fabricaMayorVentas() {
+		int valorMax =0;
+		Fabricante salida=null;
+		for (Fabricante i:listaFabricantes) {
+			int contador =0;
+			for (Vehiculo j:Vehiculo.getListaVehiculos()) {
+				if (i == j.getFabricante()) {
+					contador +=1;
+				}
+			if (contador> valorMax) {
+				valorMax =contador;
+				salida = i;
+			}
+			}
+		}
+		return salida;
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -33,21 +51,5 @@ public class Fabricante {
 		return Fabricante.listaFabricantes;
 	}
 	
-	public static Fabricante fabricaMayorVentas() {
-		int valorMax =0;
-		Fabricante salida=null;
-		for (Fabricante i:listaFabricantes) {
-			int contador =0;
-			for (Vehiculo j:Vehiculo.getListaVehiculos()) {
-				if (i == j.getFabricante()) {
-					contador +=1;
-				}
-			if (contador> valorMax) {
-				valorMax =contador;
-				salida = i;
-			}
-			}
-		}
-		return salida;
-	}
+	
 }
