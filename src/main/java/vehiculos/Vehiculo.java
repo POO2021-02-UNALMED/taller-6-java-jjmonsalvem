@@ -23,7 +23,7 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		Vehiculo.listaVehiculos.add(this);
-		Vehiculo.cantidadVehiculos +=1;
+		Vehiculo.cantidadVehiculos ++;
 				
 	}
 
